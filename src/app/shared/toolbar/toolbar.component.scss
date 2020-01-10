@@ -1,0 +1,12 @@
+ .toolbar-spacing{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1 1 0
+ }
+
+ .menu-spacing {
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+ }

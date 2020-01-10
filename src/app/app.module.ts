@@ -10,19 +10,6 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { HouseComponent } from './components/house/house.component';
 import { RoomComponent } from './components/room/room.component';
 import { ChoreComponent } from './components/chore/chore.component';
-import {
-  MatAutocompleteModule,
-     MatButtonModule,
-     MatCheckboxModule,
-     MatDatepickerModule,
-     MatFormFieldModule,
-     MatInputModule,
-     MatRadioModule,
-     MatSelectModule,
-     MatSliderModule,
-     MatSlideToggleModule,
-     MatListModule
-} from '@angular/material';
 import { HouseService } from './services/house.service';
 import { RoomService } from './services/room.service';
 import { ChoreService } from './services/chore.service';
@@ -44,19 +31,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    HttpClientModule,
-    MatAutocompleteModule,
-     MatButtonModule,
-     MatCheckboxModule,
-     MatDatepickerModule,
-     MatFormFieldModule,
-     MatInputModule,
-     MatRadioModule,
-     MatSelectModule,
-     MatSliderModule,
-     MatSlideToggleModule,
-     MatListModule,
-
+    HttpClientModule
   ],
   providers: [
     HouseService,

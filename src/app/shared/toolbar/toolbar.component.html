@@ -1,34 +1,64 @@
-
-<mat-toolbar>
+<mat-toolbar class="top-toolbar">
   <mat-toolbar-row>
-    <button mat-fab color="accent" [matMenuTriggerFor]="menu" aria-label="menu button">
-      <span>Menu</span>
-    </button>
-  <mat-menu #menu="matMenu">
-    <div>
-    <a mat-raised-button routerLink="/">
-      <!-- <mat-icon>dialpad</mat-icon> come back and add these in later-->
-      <span>Roommates</span>
-    </a>
-    <button mat-raised-button color="primary">
-      <a routerLink="house">
-          house
-      </a>
-    </button>
-    <a mat-raised-button routerLink="rooms">
-      <span>Rooms</span>
-    </a>
-    <a mat-raised-button routerLink="chores">
-      <span>Chores</span>
-    </a>
-    <a mat-raised-button routerLink="login">
-      <span>Login</span>
-    </a>
-    <a mat-raised-button routerLink="user-profile">
-      <span>User-Profiles</span>
-    </a>
-  </div>
-  </mat-menu>
-  <h2>{{title}}</h2>
-</mat-toolbar-row>
+    <span class="toolbar-spacing">
+      <button
+        mat-fab
+        color="accent"
+        [matMenuTriggerFor]="menu"
+        aria-label="menu button">
+        <span>Home</span>
+      </button>
+      <button
+        mat-fab
+        color="accent"
+        [matMenuTriggerFor]="menu2">
+        <span>MySpot</span>
+      </button>
+      <button
+        mat-fab
+        color="accent"
+        [matMenuTriggerFor]="menu3">
+        <span>User</span>
+      </button>
+      <mat-menu #menu="matMenu" xPosition="after" >
+        <div class="menu-spacing">
+          <a mat-button routerLink="/" color="accent">
+            <!-- <mat-icon>dialpad</mat-icon> come back and add these in later-->
+            <span>Home</span>
+          </a>
+        </div>
+      </mat-menu>
+
+      <mat-menu #menu2="matMenu" xPosition="before">
+        <div class="menu-spacing">
+        <button mat-button color="accent" routerLink="house">
+          <span>
+            House
+          </span>
+        </button>
+          <a mat-button routerLink="rooms" color="accent">
+            <span>Rooms</span>
+          </a>
+          <a mat-button  routerLink="chores" color="accent">
+            <span>Chores</span>
+          </a>
+        </div>
+      </mat-menu>
+      <mat-menu #menu3="matMenu" xPosition="before">
+        <div class="menu-spacing">
+          <a mat-button routerLink="login" color="accent">
+            <span>Login</span>
+          </a>
+          <a mat-button routerLink="user-profile" color="accent">
+            <span>User-Profiles</span>
+          </a>
+        </div>
+      </mat-menu>
+      <h2>{{ title }}</h2>
+
+    </span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <breadcrumbs></breadcrumbs>
+  </mat-toolbar-row>
 </mat-toolbar>
