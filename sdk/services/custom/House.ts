@@ -16,7 +16,9 @@ import { SocketConnection } from '../../sockets/socket.connections';
 /**
  * Api services for the `House` model.
  */
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class HouseApi extends BaseLoopBackApi {
 
   constructor(
