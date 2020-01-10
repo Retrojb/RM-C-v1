@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -18,13 +18,13 @@ import {
 } from '@angular/material';
 
 import { BreadcrumbComponent } from './breadcrumbs/breadcrumbs.component';
-import { HeaderMenuComponent } from './header-menu/header-menu.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 @NgModule({
   declarations: [
     BreadcrumbComponent,
-    HeaderMenuComponent,
+    ToolbarComponent,
   ],
   imports: [
     CommonModule,
@@ -47,7 +47,7 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
   ],
   exports: [
     BreadcrumbComponent,
-    HeaderMenuComponent,
+    ToolbarComponent,
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
