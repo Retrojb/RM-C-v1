@@ -14,10 +14,7 @@ export class HouseComponent implements OnInit {
 
   houses: any = [];
 
-  bogus: Observable<House>;
-  constructor(private route: ActivatedRoute,
-              private houseService: HouseService) { }
-
+  constructor(private houseService: HouseService) { }
 
   ngOnInit() {
     this.houseService.getHouses().then(data => {
