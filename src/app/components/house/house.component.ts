@@ -12,25 +12,18 @@ import { House } from 'sdk';
 })
 export class HouseComponent implements OnInit {
 
-  houses: HouseModel[];
+  houses: any = [];
 
-  $bogus: Observable<House>[];
-  constructor(private route: ActivatedRoute) { }
+  bogus: Observable<House>;
+  constructor(private route: ActivatedRoute,
+              private houseService: HouseService) { }
+
 
   ngOnInit() {
-    this.route.data.subscribe(routeData => {
-      let data = routeData['data'];
-      if (data) {
-        this.houses = data.house;
-      }
+    this.houseService.getHouses().then(data => {
+      this.houses = data;
+      setTimeout(() => {}, 0);
     });
-    console.log('onit loop', this.$bogus);
-    this.something();
-  }
-
-  something() {
-    console.log('houses', this.houses);
-    // this.houseService.getHouses();
   }
 
 }
