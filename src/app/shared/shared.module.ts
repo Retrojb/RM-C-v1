@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -12,15 +12,19 @@ import {
   MatToolbarModule,
   MatListModule,
   MatButtonModule,
-  MatChipsModule
+  MatChipsModule,
+  MatMenuModule,
+  MatIconModule
 } from '@angular/material';
 
-import { BreadcrumbComponent } from './breadcrumbs.component';
+import { BreadcrumbComponent } from './breadcrumbs/breadcrumbs.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 @NgModule({
   declarations: [
     BreadcrumbComponent,
+    ToolbarComponent,
   ],
   imports: [
     CommonModule,
@@ -33,6 +37,8 @@ import { BreadcrumbComponent } from './breadcrumbs.component';
     MatListModule,
     MatButtonModule,
     MatChipsModule,
+    MatMenuModule,
+    MatIconModule,
     SDKBrowserModule.forRoot(),
     BrowserAnimationsModule
   ],
@@ -41,6 +47,7 @@ import { BreadcrumbComponent } from './breadcrumbs.component';
   ],
   exports: [
     BreadcrumbComponent,
+    ToolbarComponent,
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
@@ -51,7 +58,10 @@ import { BreadcrumbComponent } from './breadcrumbs.component';
     MatToolbarModule,
     MatListModule,
     MatButtonModule,
-    MatChipsModule
+    MatChipsModule,
+    MatMenuModule,
+    MatIconModule,
+
   ]
 })
 export class SharedModule { }

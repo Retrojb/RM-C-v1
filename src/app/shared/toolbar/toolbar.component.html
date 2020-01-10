@@ -1,0 +1,34 @@
+
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-fab color="accent" [matMenuTriggerFor]="menu" aria-label="menu button">
+      <span>Menu</span>
+    </button>
+  <mat-menu #menu="matMenu">
+    <div>
+    <a mat-raised-button routerLink="/">
+      <!-- <mat-icon>dialpad</mat-icon> come back and add these in later-->
+      <span>Roommates</span>
+    </a>
+    <button mat-raised-button color="primary">
+      <a routerLink="house">
+          house
+      </a>
+    </button>
+    <a mat-raised-button routerLink="rooms">
+      <span>Rooms</span>
+    </a>
+    <a mat-raised-button routerLink="chores">
+      <span>Chores</span>
+    </a>
+    <a mat-raised-button routerLink="login">
+      <span>Login</span>
+    </a>
+    <a mat-raised-button routerLink="user-profile">
+      <span>User-Profiles</span>
+    </a>
+  </div>
+  </mat-menu>
+  <h2>{{title}}</h2>
+</mat-toolbar-row>
+</mat-toolbar>
