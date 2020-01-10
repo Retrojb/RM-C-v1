@@ -5,46 +5,29 @@
       <span>Menu</span>
     </button>
   <mat-menu #menu="matMenu">
-    <a mat-button routerLink="/">
+    <div>
+    <a mat-raised-button routerLink="/">
       <!-- <mat-icon>dialpad</mat-icon> come back and add these in later-->
       <span>Roommates</span>
     </a>
-    <a mat-button routerLink="house">
-      <span>House</span>
-    </a>
-    <a mat-button routerLink="rooms">
+    <button mat-raised-button color="primary">
+      <a routerLink="house">
+          house
+      </a>
+    </button>
+    <a mat-raised-button routerLink="rooms">
       <span>Rooms</span>
     </a>
-    <a mat-button routerLink="chores">
+    <a mat-raised-button routerLink="chores">
       <span>Chores</span>
     </a>
-    <a mat-button routerLink="login">
+    <a mat-raised-button routerLink="login">
       <span>Login</span>
     </a>
-    <a mat-button routerLink="user-profile">
+    <a mat-raised-button routerLink="user-profile">
       <span>User-Profiles</span>
     </a>
-  </mat-menu>
-
-  <mat-menu>
-    <ul>
-      <li>
-        <a routerLink="/login">login</a>
-      </li>
-      <li>
-        <a routerLink="/user-profile">profile</a>
-      </li>
-      <li>
-        <a routerLink="/house">house</a>
-      </li>
-      <li>
-        <a routerLink="/rooms">rooms</a>
-      </li>
-      <li>
-        <a routerLink="/chores">chores</a>
-      </li>
-
-    </ul>
+  </div>
   </mat-menu>
   <h2>{{title}}</h2>
 </mat-toolbar-row>
