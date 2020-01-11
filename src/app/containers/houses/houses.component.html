@@ -1,1 +1,14 @@
 <p>houses works!</p>
+<div class="col-lg-12 categories">
+  <div class="card col-md-offset-2 col-md-8 ">
+    <h3 class="list-title">Houses</h3>
+
+      <div class="list-item" *ngFor="let house of houses">
+        <a [routerLink]="['/houses', house.id]">{{ house.address }}</a>
+        {{ house.state }}
+        {{ house.zipcode }}
+        {{ house.houseName }}
+      </div>
+
+</div>
+</div>

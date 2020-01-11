@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { House } from 'sdk';
-import { HouseService } from './../../services/house.service';
+import { HouseService } from '../../services/house.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
