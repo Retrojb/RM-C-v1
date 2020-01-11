@@ -4,9 +4,8 @@
     <h3 class="list-title">Chores</h3>
 
       <div class="list-item" *ngFor="let chore  of chores">
-        <a [routerLink]="['/chore', chore.id]">
+        <a [routerLink]="['/chores', chore.id]">
           {{ chore.chore }}</a>
       </div>
 
-</div>
 </div>
