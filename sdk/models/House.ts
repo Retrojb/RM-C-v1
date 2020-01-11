@@ -13,6 +13,7 @@ export class House implements HouseInterface {
   "address": string;
   "zipcode": string;
   "id": any;
+  "slug"?: string
   constructor(data?: HouseInterface) {
     Object.assign(this, data);
   }

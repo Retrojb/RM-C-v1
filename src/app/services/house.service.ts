@@ -47,4 +47,13 @@ export class HouseService {
     return this.houseApi.deleteById<House>(houseId)
       .toPromise();
   }
+
+  getHouseBySlug(slug: string) {
+    return this.getHouses()
+    .then(houses =>{
+      return houses.find((house) => {
+        return house.slug == slug;
+      });
+    })
+  }
 }

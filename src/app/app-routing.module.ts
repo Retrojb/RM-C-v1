@@ -13,6 +13,7 @@ const routes: Routes = [
   {path: 'user-profile', component: UserProfileComponent},
   {path: 'login', component: LoginComponent},
   {path: 'house', component: HouseComponent},
+  {path: 'house/:id', component: HouseComponent, pathMatch: 'full'},
   {path: 'rooms', component: RoomComponent},
   {path: 'chores', component: ChoreComponent}
 ];
