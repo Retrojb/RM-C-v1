@@ -1,0 +1,12 @@
+<p>chores works!</p>
+<div class="col-lg-12 categories">
+  <div class="card col-md-offset-2 col-md-8 ">
+    <h3 class="list-title">Chores</h3>
+
+      <div class="list-item" *ngFor="let chore  of chores">
+        <a [routerLink]="['/chore', chore.id]">
+          {{ chore.chore }}</a>
+      </div>
+
+</div>
+</div>

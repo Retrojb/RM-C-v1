@@ -9,7 +9,6 @@ import { LoginComponent } from './components/login/login.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { HouseComponent } from './components/house/house.component';
 import { RoomComponent } from './components/room/room.component';
-import { ChoreComponent } from './components/chore/chore.component';
 import { HouseService } from './services/house.service';
 import { RoomService } from './services/room.service';
 import { ChoreService } from './services/chore.service';
@@ -17,6 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { SocketConnection } from 'sdk/sockets/socket.connections';
 import { SDKModels, LoopBackAuth, ErrorHandler, InternalStorage } from 'sdk';
 import { SharedModule } from './shared/shared.module';
+import { MyPlaceComponent } from './components/my-place/my-place.component';
+import { HousesComponent } from './containers/houses/houses.component';
+import { RoomsComponent } from './containers/rooms/rooms.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,10 @@ import { SharedModule } from './shared/shared.module';
     UserProfileComponent,
     HouseComponent,
     RoomComponent,
-    ChoreComponent
+
+    MyPlaceComponent,
+    HousesComponent,
+    RoomsComponent
   ],
   imports: [
     BrowserModule,

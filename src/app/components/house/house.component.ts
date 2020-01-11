@@ -23,4 +23,7 @@ export class HouseComponent implements OnInit {
     });
   }
 
+  something() {
+
+  }
 }

@@ -14,9 +14,9 @@ export class HouseService {
     .toPromise();
   }
 
-  getHouse(houseId) {
+  getHouse(id) {
     const houseQuery = {
-      id: houseId
+      id: id
     };
     return this.houseApi.find<House>(
       {
@@ -46,14 +46,5 @@ export class HouseService {
   deleteHouse(houseId) {
     return this.houseApi.deleteById<House>(houseId)
       .toPromise();
-  }
-
-  getHouseBySlug(slug: string) {
-    return this.getHouses()
-    .then(houses =>{
-      return houses.find((house) => {
-        return house.slug == slug;
-      });
-    })
   }
 }

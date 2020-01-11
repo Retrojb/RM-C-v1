@@ -1,5 +1,4 @@
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
-import { ChoreComponent } from './components/chore/chore.component';
 import { RoomComponent } from './components/room/room.component';
 import { HouseComponent } from './components/house/house.component';
 import { NgModule, Component } from '@angular/core';
@@ -15,7 +14,6 @@ const routes: Routes = [
   {path: 'house', component: HouseComponent},
   {path: 'house/:id', component: HouseComponent, pathMatch: 'full'},
   {path: 'rooms', component: RoomComponent},
-  {path: 'chores', component: ChoreComponent}
 ];
 
 @NgModule({
