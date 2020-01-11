@@ -4,7 +4,7 @@
     <h3 class="list-title">Rooms</h3>
 
       <div class="list-item" *ngFor="let room  of rooms">
-        <a [routerLink]="['/house', room.id]">{{ room.roomName }}</a>
+        <a [routerLink]="['/rooms', room.id]">{{ room.roomName }}</a>
             {{room.roomType}}
       </div>
 

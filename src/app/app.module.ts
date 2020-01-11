@@ -8,25 +8,36 @@ import { SocketConnection } from 'sdk/sockets/socket.connections';
 import { SDKModels, LoopBackAuth, ErrorHandler, InternalStorage } from 'sdk';
 
 /*
-  COMPONENTS
+COMPONENTS
 */
-  // CHORES
+// CHORES
 import { ChoresComponent } from './containers/chores/chores.component';
 import { ChoresFormComponent } from './components/chores-form/chores-form.component';
 import { NewChoreComponent } from './components/chores-form/new-chore/new-chore.component';
 import { EditChoreComponent } from './components/chores-form/edit-chore/edit-chore.component';
 
-  // HOUSES
+// HOUSES
 import { HousesComponent } from './containers/houses/houses.component';
 import { HouseFormComponent } from './components/houses-form/house-form.component';
 import { NewHouseComponent } from './components/houses-form/new-house/new-house.component';
 import { EditHouseComponent } from './components/houses-form/edit-house/edit-house.component';
 
-  // ROOMS
+// ROOMS
 import { RoomsComponent } from './containers/rooms/rooms.component';
 import { EditRoomComponent } from './components/rooms-form/edit-room/edit-room.component';
 import { NewRoomComponent } from './components/rooms-form/new-room/new-room.component';
 import { RoomFormComponent } from './components/rooms-form/room-form.component';
+
+// USERS
+  // USER LOGIN
+import { LoginComponent } from './containers/login/login.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+
+  // USER PROFILE
+import { UserProfileComponent } from './containers/user-profile/user-profile.component';
+import { NewUserFormComponent } from './components/user-form/new-user-form/new-user-form.component';
+import { EditUserFormComponent } from './components/user-form/edit-user-form/edit-user-form.component';
+
 
 /*
  SERVICES
@@ -42,10 +53,9 @@ import { SharedModule } from './shared/shared.module';
 
 
 
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { LoginComponent } from './components/login/login.component';
-import { UserProfileComponent } from './components/user-profile/user-profile.component';
-import { MyPlaceComponent } from './components/my-place/my-place.component';
+import { LandingPageComponent } from './containers/landing-page/landing-page.component';
+import { MyPlaceComponent } from './containers/my-place/my-place.component';
+import { UserFormComponent } from './components/user-form/user-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,11 +75,17 @@ import { MyPlaceComponent } from './components/my-place/my-place.component';
     NewRoomComponent,
     RoomFormComponent,
 
+    LoginComponent,
+    LoginFormComponent,
+
+    UserProfileComponent,
+    UserFormComponent,
+    EditUserFormComponent,
+    NewUserFormComponent,
 
     LandingPageComponent,
-    LoginComponent,
-    UserProfileComponent,
     MyPlaceComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
