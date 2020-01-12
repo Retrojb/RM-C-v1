@@ -37,8 +37,8 @@ export class HouseService {
     return this.houseApi.updateAttributes<House>(val.id, data);
   }
 
-  deleteHouse(houseId) {
-    return this.houseApi.deleteById<House>(houseId)
+  deleteHouse(id) {
+    return this.houseApi.deleteById<House>(id)
       .toPromise();
   }
 }

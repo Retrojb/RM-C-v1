@@ -1,5 +1,5 @@
 <p>houses works!</p>
-<button mat-raised-button color="primary" (click)="openNewHouseModal()">New house</button>
+<button mat-raised-button color="accent" (click)="openNewHouseModal()">New house</button>
 <div class="col-lg-12 categories">
   <div class="card col-md-offset-2 col-md-8 ">
     <h3 class="list-title">Houses</h3>
@@ -9,6 +9,8 @@
         {{ house.state }}
         {{ house.zipcode }}
         {{ house.houseName }}
+        <button mat-button color="accent">Edit House</button>
+        <button mat-button color="accent" (click)="deleteHouse(house.houseId)">Delete House</button>
       </div>
 
 </div>

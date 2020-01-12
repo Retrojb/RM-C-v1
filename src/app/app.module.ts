@@ -57,6 +57,7 @@ import { LandingPageComponent } from './containers/landing-page/landing-page.com
 import { MyPlaceComponent } from './containers/my-place/my-place.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { HouseRoomComponent } from './containers/house-room/house-room.component';
+import { DeleteHouseComponent } from './components/houses-form/delete-house/delete-house.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,6 +71,7 @@ import { HouseRoomComponent } from './containers/house-room/house-room.component
     HouseFormComponent,
     NewHouseComponent,
     EditHouseComponent,
+    DeleteHouseComponent,
 
     RoomsComponent,
     NewRoomComponent,
@@ -89,6 +91,7 @@ import { HouseRoomComponent } from './containers/house-room/house-room.component
     LoginFormComponent,
     HouseRoomComponent,
 
+
   ],
   imports: [
     BrowserModule,
@@ -98,7 +101,9 @@ import { HouseRoomComponent } from './containers/house-room/house-room.component
   ],
   entryComponents: [
     NewRoomComponent,
-    HouseFormComponent
+    HouseFormComponent,
+    DeleteHouseComponent,
+
   ],
   providers: [
     HouseService,

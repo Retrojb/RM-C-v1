@@ -1,3 +1,4 @@
+import { HouseFormComponent } from './components/houses-form/house-form.component';
 import { NewHouseComponent } from './components/houses-form/new-house/new-house.component';
 import { HouseRoomComponent } from './containers/house-room/house-room.component';
 import { NgModule, Component } from '@angular/core';
@@ -12,11 +13,10 @@ import { LandingPageComponent } from './containers/landing-page/landing-page.com
 import { LoginComponent } from './containers/login/login.component';
 import { HousesComponent } from './containers/houses/houses.component';
 
-
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'houses', component: HousesComponent},
-  {path: 'houses/:id', component: HousesComponent, pathMatch: 'full'}, //make house component for single entity
+  {path: 'houses/:id', component: HouseFormComponent, pathMatch: 'full'}, //make house component for single entity
   {path: 'houses/:id/houseRoom', component: HouseRoomComponent},
   {path: 'houses/new-house', component: NewHouseComponent},
   {path: 'rooms', component: RoomsComponent},
