@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { HouseService } from './../../../services/house.service';
+import { Component, OnInit, Inject } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-new-house',
@@ -7,9 +10,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewHouseComponent implements OnInit {
 
-  constructor() { }
+  houseForm: FormGroup;
+
+  constructor(private houseService: HouseService,
+              public thisDialogRef: MatDialogRef<NewHouseComponent>,
+              @Inject(MAT_DIALOG_DATA) public modalData: any
+
+    ) { }
 
   ngOnInit() {
+    this.houseForm = new FormGroup({
+      houseName: new FormControl(''),
+      address: new FormControl(''),
+      zipcode: new FormControl('')
+    });
   }
 
+  onSubmit(val) {
+    const data: any = {};
+    data.houseName = val.houseName;
+    data.address = val.address;
+    data.zipcode = val.zipcode;
+
+    this.houseService.createHouse(data)
+    .then(house => {
+      this.thisDialogRef.close(house);
+      this.houseForm.reset();
+    });
+  }
+
+  onCancel() {
+    this.thisDialogRef.close();
+  }
 }

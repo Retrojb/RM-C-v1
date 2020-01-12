@@ -76,15 +76,15 @@ export class Room implements RoomInterface {
         house: {
           name: 'house',
           type: 'House',
-          model: 'House',
-          relationType: 'hasOne',
+          model: 'house',
+          relationType: 'hasMany',
                   keyFrom: 'id',
           keyTo: 'id'
         },
         Chore: {
           name: 'Chore',
-          type: 'Chore[]',
-          model: 'Chore',
+          type: 'Chore',
+          model: 'chore',
           relationType: 'hasMany',
                   keyFrom: 'id',
           keyTo: 'id'

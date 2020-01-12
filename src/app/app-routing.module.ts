@@ -1,3 +1,5 @@
+import { NewHouseComponent } from './components/houses-form/new-house/new-house.component';
+import { HouseRoomComponent } from './containers/house-room/house-room.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ChoresComponent } from './containers/chores/chores.component';
@@ -15,6 +17,8 @@ const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'houses', component: HousesComponent},
   {path: 'houses/:id', component: HousesComponent, pathMatch: 'full'}, //make house component for single entity
+  {path: 'houses/:id/houseRoom', component: HouseRoomComponent},
+  {path: 'houses/new-house', component: NewHouseComponent},
   {path: 'rooms', component: RoomsComponent},
   {path: 'rooms/:id', component: RoomsComponent, pathMatch: 'full'},
   {path: 'chores', component: ChoresComponent},

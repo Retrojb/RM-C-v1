@@ -56,6 +56,7 @@ import { SharedModule } from './shared/shared.module';
 import { LandingPageComponent } from './containers/landing-page/landing-page.component';
 import { MyPlaceComponent } from './containers/my-place/my-place.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
+import { HouseRoomComponent } from './containers/house-room/house-room.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,8 +72,8 @@ import { UserFormComponent } from './components/user-form/user-form.component';
     EditHouseComponent,
 
     RoomsComponent,
-    EditRoomComponent,
     NewRoomComponent,
+    EditRoomComponent,
     RoomFormComponent,
 
     LoginComponent,
@@ -86,12 +87,18 @@ import { UserFormComponent } from './components/user-form/user-form.component';
     LandingPageComponent,
     MyPlaceComponent,
     LoginFormComponent,
+    HouseRoomComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     HttpClientModule
+  ],
+  entryComponents: [
+    NewRoomComponent,
+    HouseFormComponent
   ],
   providers: [
     HouseService,
