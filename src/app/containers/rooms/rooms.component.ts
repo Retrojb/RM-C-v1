@@ -1,3 +1,5 @@
+import { NewRoomComponent } from './../../components/rooms-form/new-room/new-room.component';
+import { MatDialog } from '@angular/material';
 import { Component, OnInit } from '@angular/core';
 import { RoomService } from 'src/app/services/room.service';
 
@@ -9,7 +11,8 @@ import { RoomService } from 'src/app/services/room.service';
 export class RoomsComponent implements OnInit {
   rooms: any = [];
 
-  constructor(private roomService: RoomService) { }
+  constructor(private roomService: RoomService,
+              private dialog: MatDialog) { }
 
   ngOnInit() {
     this.roomService.getRooms()
@@ -17,6 +20,20 @@ export class RoomsComponent implements OnInit {
       this.rooms = data;
       setTimeout(() => {}, 0);
     });
+  }
 
-}
+  openNewRoomModal() {
+    const dialogref = this.dialog.open(NewRoomComponent , {
+      data: {}
+    });
+    dialogref.afterClosed().subscribe(rooms => {
+        if (rooms) {
+          this.addRoomToList(rooms);
+        }
+      });
+  }
+
+  addRoomToList(rooms) {
+    this.roomService.createRoom(rooms);
+  }
 }

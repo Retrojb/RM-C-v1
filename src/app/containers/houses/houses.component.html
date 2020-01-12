@@ -1,17 +1,24 @@
-<p>houses works!</p>
-<button mat-raised-button color="accent" (click)="openNewHouseModal()">New house</button>
-<div class="col-lg-12 categories">
-  <div class="card col-md-offset-2 col-md-8 ">
-    <h3 class="list-title">Houses</h3>
-
-      <div class="list-item" *ngFor="let house of houses">
-        <a [routerLink]="['/houses', house.id]">{{ house.address }}</a>
-        {{ house.state }}
-        {{ house.zipcode }}
-        {{ house.houseName }}
-        <button mat-button color="accent">Edit House</button>
-        <button mat-button color="accent" (click)="deleteHouse(house.houseId)">Delete House</button>
-      </div>
-
+<div>
+  <button mat-raised-button color="accent" (click)="openNewHouseModal()">New house</button>
 </div>
+
+<div class="col-lg-12 categories">
+  <div class="card col-md-offset-2 col-md-8">
+    <h3 class="list-title">All Houses</h3>
+    <div class="mat-list-item" *ngFor="let house of houses">
+      <div class='mat-card'>
+        <div class='mat-card-content'>
+          <h3>{{ house.houseName }}</h3>
+          {{ house.state }}
+          {{ house.zipcode }}
+          {{ house.address }}
+        </div>
+          <button mat-flat-button color="accent" [routerLink]="['/houses', house.id]">
+            Go to house
+          </button>
+          <button mat-flat-button color="accent">Edit House</button>
+          <button mat-flat-button color="accent" (click)="deleteHouse(house.houseId)">Delete House</button>
+        </div>
+    </div>
+  </div>
 </div>
