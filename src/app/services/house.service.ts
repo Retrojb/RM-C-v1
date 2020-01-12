@@ -15,13 +15,7 @@ export class HouseService {
   }
 
   getHouse(id) {
-    const houseQuery = {
-      id: id
-    };
-    return this.houseApi.find<House>(
-      {
-        where: houseQuery
-      });
+   return this.houseApi.findById<House>(id);
   }
 
   createHouse(val) {

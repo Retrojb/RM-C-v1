@@ -1,3 +1,5 @@
+import { Room } from './Room';
+import { Chore } from './Chore';
 /* tslint:disable */
 
 declare var Object: any;
@@ -6,6 +8,10 @@ export interface HouseInterface {
   "address": string;
   "zipcode": string;
   "id"?: any;
+  roomId?: any
+  room?: Room[];
+  choreId?: any;
+  chore?: Chore[];
 }
 
 export class House implements HouseInterface {
@@ -13,7 +19,10 @@ export class House implements HouseInterface {
   "address": string;
   "zipcode": string;
   "id": any;
-  "slug"?: string
+  roomId?: any
+  room?: Room[];
+  choreId?: any;
+  chore?: Chore[];
   constructor(data?: HouseInterface) {
     Object.assign(this, data);
   }
@@ -42,7 +51,7 @@ export class House implements HouseInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'House',
+      name: 'house',
       plural: 'Houses',
       path: 'Houses',
       idName: 'id',
@@ -63,8 +72,32 @@ export class House implements HouseInterface {
           name: 'id',
           type: 'any'
         },
+        "roomId": {
+          name: 'roomId',
+          type: 'any'
+        },
+        "choreId": {
+          name: 'choreId',
+          type: 'any'
+        }
       },
       relations: {
+        rooms: {
+          name: 'rooms',
+          type: 'Rooms',
+          model: 'Rooms',
+          relationType: 'hasMany',
+                  keyFrom: 'id',
+          keyTo: 'id'
+        },
+        chore: {
+          name: 'chore',
+          type: 'Chore',
+          model: 'Chore',
+          relationType: 'hasMany',
+                  keyFrom: 'id',
+          keyTo: 'id'
+        }
       }
     }
   }

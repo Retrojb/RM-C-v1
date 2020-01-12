@@ -1,4 +1,8 @@
+import { ActivatedRoute } from '@angular/router';
+import { HouseService } from './../../services/house.service';
 import { Component, OnInit } from '@angular/core';
+import { House } from 'sdk';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-house-form',
@@ -7,9 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HouseFormComponent implements OnInit {
 
-  constructor() { }
+  houses: any = [];
+
+  constructor(private houseService: HouseService,
+              private dialog: MatDialog,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
+    // this.houseService.getHouses()
+    //   .then(data => {
+    //     this.houses = data;
+    //     setTimeout(() => {}, 0);
+    // });
+    this.foo();
+  }
+
+  foo() {
+    this.houseService.getHouses().then(data => {
+      const id = this.route.snapshot.paramMap.get('id');
+      this.houseService.getHouse(id)
+    .subscribe(house => this.houses = house);
+    });
   }
 
 }
