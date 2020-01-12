@@ -14,9 +14,7 @@ export class NewHouseComponent implements OnInit {
 
   constructor(private houseService: HouseService,
               public thisDialogRef: MatDialogRef<NewHouseComponent>,
-              @Inject(MAT_DIALOG_DATA) public modalData: any
-
-    ) { }
+              @Inject(MAT_DIALOG_DATA) public modalData: any) { }
 
   ngOnInit() {
     this.houseForm = new FormGroup({
@@ -27,12 +25,12 @@ export class NewHouseComponent implements OnInit {
   }
 
   onSubmit(val) {
-    const data: any = {};
-    data.houseName = val.houseName;
-    data.address = val.address;
-    data.zipcode = val.zipcode;
+    const house: any = {};
+    house.houseName = val.houseName;
+    house.address = val.address;
+    house.zipcode = val.zipcode;
 
-    this.houseService.createHouse(data)
+    this.houseService.createHouse(house)
     .then(house => {
       this.thisDialogRef.close(house);
       this.houseForm.reset();

@@ -1,3 +1,5 @@
+import { HouseResolver } from './containers/houses/house.resolver';
+
 import { HouseFormComponent } from './components/houses-form/house-form.component';
 import { NewHouseComponent } from './components/houses-form/new-house/new-house.component';
 import { HouseRoomComponent } from './containers/house-room/house-room.component';
@@ -16,7 +18,7 @@ import { HousesComponent } from './containers/houses/houses.component';
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'houses', component: HousesComponent},
-  {path: 'houses/:id', component: HouseFormComponent, pathMatch: 'full'}, //make house component for single entity
+  {path: 'houses/:id', component: HouseFormComponent, pathMatch: 'full'},
   {path: 'houses/:id/houseRoom', component: HouseRoomComponent},
   {path: 'houses/new-house', component: NewHouseComponent},
   {path: 'rooms', component: RoomsComponent},
@@ -24,7 +26,13 @@ const routes: Routes = [
   {path: 'chores', component: ChoresComponent},
   {path: 'chores/:id', component: ChoresComponent, pathMatch: 'full'},
 
-
+  // {
+  //   path: 'questions/about/:categorySlug',
+  //   component: CategoryQuestionsComponent,
+  //   resolve: {
+  //     data: CategoryQuestionsResolver
+  //   }
+  // },
   {path: 'user-profile', component: UserProfileComponent},
   {path: 'login', component: LoginComponent},
 
