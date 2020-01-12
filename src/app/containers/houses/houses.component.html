@@ -5,7 +5,7 @@
     <h3 class="list-title">Houses</h3>
 
       <div class="list-item" *ngFor="let house of houses">
-        <a [routerLink]="['/houses', house.id, 'houseRoom']">{{ house.address }}</a>
+        <a [routerLink]="['/houses', house.id]">{{ house.address }}</a>
         {{ house.state }}
         {{ house.zipcode }}
         {{ house.houseName }}

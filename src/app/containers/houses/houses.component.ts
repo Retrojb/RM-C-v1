@@ -28,12 +28,12 @@ export class HousesComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(house => {
       if (house) {
-        this.addQuestionToList(house);
+        this.addHouseToList(house);
       }
     });
   }
 
-  addQuestionToList(house) {
+  addHouseToList(house) {
     this.houses.push(house);
   }
 }
