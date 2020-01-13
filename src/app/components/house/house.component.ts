@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { HouseService } from './../../services/house.service';
-import { HouseModel } from './house.model';
+import { HouseModel } from '../../models/house.model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { House } from 'sdk';

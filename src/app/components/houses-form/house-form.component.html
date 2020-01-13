@@ -1,0 +1,13 @@
+<h3>Welcome to your house</h3>
+<div>
+  <h4>{{ this.houses.houseName }}</h4>
+  <p>{{ this.houses.address }}</p>
+</div>
+  <div class='mat-card'>
+    <div class='mat-card-title'> Rooms</div>
+    <div class='mat-card-content' >
+      <h3 matLine>
+        <a [routerLink]="['/houses/:id/rooms', houses.id]">{{this.houses.rooms}}</a>
+      </h3>
+    </div>
+  </div>

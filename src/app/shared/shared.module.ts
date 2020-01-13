@@ -14,7 +14,10 @@ import {
   MatButtonModule,
   MatChipsModule,
   MatMenuModule,
-  MatIconModule
+  MatIconModule,
+  MatCard,
+  MatCardContent,
+  MatCardModule
 } from '@angular/material';
 
 import { BreadcrumbComponent } from './breadcrumbs/breadcrumbs.component';
@@ -39,6 +42,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatChipsModule,
     MatMenuModule,
     MatIconModule,
+    MatCardModule,
     SDKBrowserModule.forRoot(),
     BrowserAnimationsModule
   ],
@@ -61,7 +65,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatChipsModule,
     MatMenuModule,
     MatIconModule,
-
+    MatCard,
+    MatCardContent
   ]
 })
 export class SharedModule { }
