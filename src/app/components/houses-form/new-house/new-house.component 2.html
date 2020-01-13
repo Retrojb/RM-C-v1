@@ -1,0 +1,24 @@
+
+  <div class="alert-modal">
+  <h3 class="modal-header">New House</h3>
+  <form [formGroup]="houseForm" class="form" (ngSubmit)="onSubmit(houseForm.value)">
+    <div class="new-house-form-group">
+      <label class="mat-form-field-label">House Name
+
+    <input class="form-control form-input" type="text" formControlName="houseName" />
+    </label>
+    <label class="mat-form-field-label">Address
+
+      <input class="form-control form-input" type="text" formControlName="address" />
+    </label>
+    <label class="mat-form-field-label">Zipcode
+      <input class="form-control form-input" type="text" formControlName="zipcode" />
+    </label>
+  </div>
+    <div class="alert-modal-buttons">
+    <button mat-raised-button color="primary" class="alert-modal-button alert-modal-button-success" type="submit" [disabled]="!houseForm.valid">Submit</button>
+    <button mat-raised-button class="alert-modal-button alert-modal-button-failure" type="button"(click)="onCancel()">Cancel</button>
+  </div>
+</form>
+</div>
+

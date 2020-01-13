@@ -1,6 +1,6 @@
 import { House } from '../../../sdk/models/House';
 import { Injectable } from '@angular/core';
-import { HouseApi, LoopBackFilter } from 'sdk';
+import { HouseApi, LoopBackFilter } from 'sdk-v1.1';
 
 @Injectable({
   providedIn: 'root'
