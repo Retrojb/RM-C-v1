@@ -4,4 +4,6 @@ export class HouseModel {
   address: string;
   zipcode: string;
   id?: any;
+  houseId?: any;
+  rooms?: any[];
 }

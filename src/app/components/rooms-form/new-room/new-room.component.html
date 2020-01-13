@@ -1,1 +1,22 @@
-<p>new-room works!</p>
+
+  <div class="alert-modal">
+    <h3 class="modal-header">New House</h3>
+      <form [formGroup]="roomForm" class="form" (ngSubmit)="onSubmit(roomForm.value)">
+        <div class="new-room-form-group">
+          <label class="mat-form-field-label">Room Name
+            <input class="form-control form-input" type="text" formControlName="roomName" />
+          </label>
+          <label class="mat-form-field-label">Room Type
+            <input class="form-control form-input" type="text" formControlName="roomType" />
+          </label>
+          <label class="mat-form-field-label">Owner
+            <input class="form-control form-input" type="text" formControlName="owner" />
+          </label>
+        </div>
+        <div class="alert-modal-buttons">
+          <button mat-raised-button color="primary" class="alert-modal-button alert-modal-button-success" type="submit" [disabled]="!roomForm.valid">Submit</button>
+          <button mat-raised-button class="alert-modal-button alert-modal-button-failure" type="button"(click)="onCancel()">Cancel</button>
+        </div>
+    </form>
+  </div>
+

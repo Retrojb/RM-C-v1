@@ -1,3 +1,6 @@
+import { ActivatedRoute } from '@angular/router';
+import { HouseService } from 'src/app/services/house.service';
+import { RoomService } from 'src/app/services/room.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomFormComponent implements OnInit {
 
-  constructor() { }
+  rooms: any = [];
+
+  constructor(private roomService: RoomService,
+              private houseService: HouseService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.fetchRoom();
+  }
+
+  fetchRoom() {
+    this.roomService.getRooms().then( data => {
+      const id  = this.route.snapshot.paramMap.get('id');
+      this.roomService.getRoom(id)
+      .subscribe(room => this.rooms = room);
+    });
   }
 
 }
