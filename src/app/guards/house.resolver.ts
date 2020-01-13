@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Resolve } from "@angular/router";
-import { HouseService } from "../../services/house.service";
+import { HouseService } from "../services/house.service";
 
 @Injectable()
 export class HouseResolver implements Resolve<any> {

@@ -19,6 +19,7 @@ import { SharedModule } from './shared/shared.module';
 import { MyPlaceComponent } from './components/my-place/my-place.component';
 import { HousesComponent } from './containers/houses/houses.component';
 import { RoomsComponent } from './containers/rooms/rooms.component';
+import { HouseRoomsComponent } from './containers/house-rooms/house-rooms.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { RoomsComponent } from './containers/rooms/rooms.component';
 
     MyPlaceComponent,
     HousesComponent,
-    RoomsComponent
+    RoomsComponent,
+    HouseRoomsComponent
   ],
   imports: [
     BrowserModule,
