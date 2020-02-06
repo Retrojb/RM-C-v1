@@ -24,9 +24,8 @@ import { EditHouseComponent } from './components/houses-form/edit-house/edit-hou
 
 // ROOMS
 import { RoomsComponent } from './containers/rooms/rooms.component';
-<<<<<<< HEAD
 import { HouseRoomsComponent } from './containers/house-rooms/house-rooms.component';
-=======
+
 import { EditRoomComponent } from './components/rooms-form/edit-room/edit-room.component';
 import { NewRoomComponent } from './components/rooms-form/new-room/new-room.component';
 import { RoomFormComponent } from './components/rooms-form/room-form.component';
@@ -61,7 +60,6 @@ import { MyPlaceComponent } from './containers/my-place/my-place.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { HouseRoomComponent } from './containers/house-room/house-room.component';
 import { DeleteHouseComponent } from './components/houses-form/delete-house/delete-house.component';
->>>>>>> 027ab59f3fb7282c8a14b4e8ea98c47db41256d8
 @NgModule({
   declarations: [
     AppComponent,
@@ -92,16 +90,12 @@ import { DeleteHouseComponent } from './components/houses-form/delete-house/dele
 
     LandingPageComponent,
     MyPlaceComponent,
-<<<<<<< HEAD
     HousesComponent,
     RoomsComponent,
-    HouseRoomsComponent
-=======
+    HouseRoomsComponent,
     LoginFormComponent,
     HouseRoomComponent,
 
-
->>>>>>> 027ab59f3fb7282c8a14b4e8ea98c47db41256d8
   ],
   imports: [
     BrowserModule,
