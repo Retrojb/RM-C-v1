@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: roommate-app-dev
+  labels:
+    app: roommate-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: roommate-app
+  template:
+    metadata:
+      labels:
+        app: roommate-app
+    spec:
+      containers:
+      - name: roommate-app-dev
+        image: retrojb/roommate-app
+        imagePullPolicy: Always
+        command: [ "echo", "SUCCESS" ]
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: roommate-app-dev
+spec:
+  selector:
+    app: roommate-app-dev
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 4200
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: roommate-app-dev
+spec:
+  backend:
+    serviceName: roommate-app-dev
+    servicePort: 4200
+---
+apiVersion: apps/v1
+kind: EndpointSlice
+metadata:
+  name: roommate-app-dev
+  labels:
+    kubernetes.io/service-name: roommate-app-dev
+addressType: IPv4
+ports:
+  - name: http
+    protocol: TCP
+    port: 4200
+endpoints:
+  - addresses:
+      - "127.0.0"
+    conditions:
+      ready: true
+    hostname: roommate-app-dev
+    topology:
+      kubernetes.io/hostname: node-1
+      topology.kubernetes.io/zone: us-west2-a
