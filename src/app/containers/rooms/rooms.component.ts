@@ -2,6 +2,8 @@ import { NewRoomComponent } from './../../components/rooms-form/new-room/new-roo
 import { MatDialog } from '@angular/material';
 import { Component, OnInit } from '@angular/core';
 import { RoomService } from 'src/app/services/room.service';
+import { House } from 'sdk';
+import { HouseService } from 'src/app/services/house.service';
 
 @Component({
   selector: 'app-rooms',
@@ -12,6 +14,7 @@ export class RoomsComponent implements OnInit {
   rooms: any = [];
 
   constructor(private roomService: RoomService,
+              private houseService: HouseService,
               private dialog: MatDialog) { }
 
   ngOnInit() {
@@ -36,4 +39,5 @@ export class RoomsComponent implements OnInit {
   addRoomToList(rooms) {
     this.roomService.createRoom(rooms);
   }
+
 }

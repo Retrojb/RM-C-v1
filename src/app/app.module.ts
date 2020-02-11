@@ -18,7 +18,7 @@ import { EditChoreComponent } from './components/chores-form/edit-chore/edit-cho
 
 // HOUSES
 import { HousesComponent } from './containers/houses/houses.component';
-import { HouseFormComponent } from './components/house/house-form.component';
+import { HouseFormComponent } from './containers/house/house-form.component';
 import { NewHouseComponent } from './components/houses-form/new-house/new-house.component';
 import { EditHouseComponent } from './components/houses-form/edit-house/edit-house.component';
 

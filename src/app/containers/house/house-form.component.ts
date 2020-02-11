@@ -2,6 +2,8 @@ import { ActivatedRoute } from '@angular/router';
 import { HouseService } from '../../services/house.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { NewRoomComponent } from 'src/app/components/rooms-form/new-room/new-room.component';
+import { RoomService } from 'src/app/services/room.service';
 
 @Component({
   selector: 'app-house-form',
@@ -13,6 +15,7 @@ export class HouseFormComponent implements OnInit {
   houses: any = [];
 
   constructor(private houseService: HouseService,
+              private roomService: RoomService,
               private dialog: MatDialog,
               private route: ActivatedRoute) { }
 
@@ -30,5 +33,20 @@ export class HouseFormComponent implements OnInit {
 
   onBack() {
 
+  }
+
+  openNewRoomModal() {
+    const dialogref = this.dialog.open(NewRoomComponent , {
+      data: {}
+    });
+    dialogref.afterClosed().subscribe(rooms => {
+        if (rooms) {
+          this.addRoomToList(rooms);
+        }
+      });
+  }
+
+  addRoomToList(rooms) {
+    this.roomService.createRoom(rooms);
   }
 }

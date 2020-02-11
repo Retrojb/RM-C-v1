@@ -1,8 +1,8 @@
 
-import { HouseFormComponent } from './components/house/house-form.component';
+import { NgModule } from '@angular/core';
+import { HouseFormComponent } from './containers/house/house-form.component';
 import { NewHouseComponent } from './components/houses-form/new-house/new-house.component';
 import { HouseRoomComponent } from './containers/house-room/house-room.component';
-import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ChoresComponent } from './containers/chores/chores.component';
 import { RoomsComponent } from './containers/rooms/rooms.component';

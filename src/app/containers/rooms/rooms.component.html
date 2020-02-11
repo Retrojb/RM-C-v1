@@ -10,11 +10,7 @@
           <h3>{{ room.roomName }}</h3>
           {{room.roomType}}
         </div>
-          <button mat-flat-button color="accent" [routerLink]="['/rooms', room.id]">
-            Go to house
-          </button>
-          <button mat-flat-button color="accent">Edit House</button>
-          <button mat-flat-button color="accent">Delete House</button>
+          <button mat-raised-button color="disabled">Go to house</button>
         </div>
     </div>
   </div>
