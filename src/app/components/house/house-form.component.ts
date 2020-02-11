@@ -1,5 +1,5 @@
 import { ActivatedRoute } from '@angular/router';
-import { HouseService } from './../../services/house.service';
+import { HouseService } from '../../services/house.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
