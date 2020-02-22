@@ -1,0 +1,27 @@
+.borders{
+  // border: thick blue solid;
+  max-width: 500px;
+  padding: 2rem;
+}
+
+.demo-icon{
+  background-image: url('../../../assets/dayum.jpg');
+  background-size: cover;
+}
+
+.title-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.cont {
+  padding: 1rem;
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+}

@@ -25,16 +25,16 @@ export class RoomsComponent implements OnInit {
     });
   }
 
-  openNewRoomModal() {
-    const dialogref = this.dialog.open(NewRoomComponent , {
-      data: {}
-    });
-    dialogref.afterClosed().subscribe(rooms => {
-        if (rooms) {
-          this.addRoomToList(rooms);
-        }
-      });
-  }
+  // openNewRoomModal() {
+  //   const dialogref = this.dialog.open(NewRoomComponent , {
+  //     data: {}
+  //   });
+  //   dialogref.afterClosed().subscribe(rooms => {
+  //       if (rooms) {
+  //         this.addRoomToList(rooms);
+  //       }
+  //     });
+  // }
 
   addRoomToList(rooms) {
     this.roomService.createRoom(rooms);

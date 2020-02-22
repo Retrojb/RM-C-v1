@@ -13,6 +13,7 @@ import { RoomService } from 'src/app/services/room.service';
 export class HouseFormComponent implements OnInit {
 
   houses: any = [];
+  rooms: any = [];
 
   constructor(private houseService: HouseService,
               private roomService: RoomService,
@@ -31,22 +32,22 @@ export class HouseFormComponent implements OnInit {
     });
   }
 
-  onBack() {
-
-  }
+  // onBack() {
+  //   this.route.parent.
+  // }
 
   openNewRoomModal() {
     const dialogref = this.dialog.open(NewRoomComponent , {
       data: {}
     });
-    dialogref.afterClosed().subscribe(rooms => {
-        if (rooms) {
-          this.addRoomToList(rooms);
+    dialogref.afterClosed().subscribe(room => {
+        if (room) {
+          this.addRoomToList(room);
         }
       });
   }
 
-  addRoomToList(rooms) {
-    this.roomService.createRoom(rooms);
+  addRoomToList(room) {
+    this.rooms.push(room);
   }
 }

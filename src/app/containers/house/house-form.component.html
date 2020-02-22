@@ -1,11 +1,12 @@
-<h3>Welcome to your house</h3>
-<div>
-
+<app-welcome-banner></app-welcome-banner>
+<div class="borders spacer">
+  <mat-card-title>Something</mat-card-title>
+  <button mat-raised-button color="accent" (click)="openNewRoomModal()">New Room</button>
 </div>
-  <div class='mat-card'>
+<div class='mat-card borders'>
     <div class='mat-card-title'>
-      <h4>{{ this.houses.houseName }}</h4>
-      <h5>{{ this.houses.address }}</h5>
+      <div>
+      </div>
     </div>
     <app-rooms></app-rooms>
   </div>
