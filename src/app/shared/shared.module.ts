@@ -17,17 +17,21 @@ import {
   MatIconModule,
   MatCard,
   MatCardContent,
-  MatCardModule
+  MatCardTitle,
+  MatCardModule,
+  MatGridListModule
 } from '@angular/material';
 
 import { BreadcrumbComponent } from './breadcrumbs/breadcrumbs.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { WelcomeBannerComponent } from './welcome-banner/welcome-banner.component';
 
 
 @NgModule({
   declarations: [
     BreadcrumbComponent,
     ToolbarComponent,
+    WelcomeBannerComponent,
   ],
   imports: [
     CommonModule,
@@ -43,8 +47,10 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatMenuModule,
     MatIconModule,
     MatCardModule,
+    MatGridListModule,
     SDKBrowserModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
   ],
   providers: [
 
@@ -57,6 +63,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     FormsModule,
     RouterModule,
     HttpClientModule,
+    WelcomeBannerComponent,
     // Material modules
     MatDialogModule,
     MatToolbarModule,
@@ -66,7 +73,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatMenuModule,
     MatIconModule,
     MatCard,
-    MatCardContent
+    MatCardContent,
+    MatCardTitle,
+    MatGridListModule
   ]
 })
 export class SharedModule { }

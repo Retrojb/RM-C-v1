@@ -1,17 +1,20 @@
-<div>
-  <button mat-raised-button color="accent" (click)="openNewRoomModal()">New Room</button>
-</div>
-<div class="col-lg-12 categories">
-  <div class="card col-md-offset-2 col-md-8">
-    <h3 class="list-title">All Rooms in House </h3>
-    <div class="mat-list-item" *ngFor="let room  of rooms">
-      <div class='mat-card'>
-        <div class='mat-card-content'>
-          <h3>{{ room.roomName }}</h3>
-          {{room.roomType}}
+
+<!-- <div class="col-lg-12 categories"> -->
+  <div class="grid">
+    <div *ngFor="let room  of rooms" >
+      <div mat-card class="borders">
+        <div mat-card-header class="title-header">
+          <div mat-card-title>{{ room.roomName }}</div>
+          <div mat-card-avatar class="demo-icon"></div>
         </div>
-          <button mat-raised-button color="disabled">Go to house</button>
+        <div mat-card-content class="cont">
+              {{ room.owner}}
+              {{ room.roomType }}
+        </div>
+          <button mat-raised-button color="accent">Enter Room</button>
+          <button mat-raised-button color="primary">Edit Room</button>
+          <button mat-raised-button color="accent">Delete Room</button>
         </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
